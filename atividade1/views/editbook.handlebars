@@ -1,0 +1,34 @@
+<h1>Editando: {{book.title}}</h1>
+<form action="/book/update" method="POST" class="form">
+<input type="hidden" name="id" value="{{book.id}}">
+  <div class="form-control">
+    <label for="title">titulo:</label>
+    <input type="text" name="title" value="{{book.title}}" />
+  </div>
+  {{! pattern="[A-Za-z]{6,12}" }}
+
+  {{!-- <div class="form-control">
+        <label for="cpf">CPF:</label>
+        <input type="number" name="cpf" value="{{user.cpf}}" min="8" max="10">
+    </div> --}}
+
+  <div class="form-control">
+    <label for="author">autor</label>
+    <input type="text" name="author" value="{{book.author}}" />
+  </div>
+   <div class="form-control">
+    <label for="price">preço</label>
+    <input type="number" name="price" value="{{book.price}}" />
+  </div>
+  <div class="form-control form-checkbox">
+    {{#if book.newsletter}}
+      <input type="checkbox" name="newsletter" checked />
+    {{else}}
+    <input type="checkbox" name="newsletter" />
+    {{/if}}
+    <label for="newsletter">Capa dura</label>
+  </div>
+  <div class="form-control">
+    <input type="submit" value="Atualizar" />
+  </div>
+</form>

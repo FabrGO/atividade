@@ -1,0 +1,30 @@
+<h1>Adicionar livro</h1>
+<form action="/books/create" method="POST" class="form">
+    <div class="form-control">
+        <label for="title">Nome:</label>
+        <input type="text" name="title" placeholder="Digite o nome do livro">
+    </div>
+
+    {{!-- <div class="form-control">
+        <label for="cpf">CPF:</label>
+        <input type="number" name="cpf" placeholder="Digite o seu cpf" min="8" max="10">
+    </div> --}}
+
+    <div class="form-control">
+        <label for="author">Author</label>
+        <input type="text" name="author" placeholder="Digite o autor">
+    </div>
+
+     <div class="form-control">
+        <label for="price">Preço</label>
+        <input type="number" name="price" placeholder="Digite o preço">
+    </div>
+
+    <div class="form-control form-checkbox">
+        <input type="checkbox" name="newsletter" checked>
+        <label for="newsletter">Capa dura</label>
+    </div>
+    <div class="form-control">
+        <input type="submit" value="Cadastrar">
+    </div>
+</form>
